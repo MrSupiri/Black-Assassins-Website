@@ -1,0 +1,54 @@
+{% extends "header.html" %}
+
+{% block body %}
+	<h3 class="text-danger text-center mb-5">{{hostname}}</h3>
+		<div class="row">
+		{% for item in items %}
+        <div class="col" style="padding-left: 10px;padding-bottom: 20px;padding-right: 10px;">
+		<div class="card border-info mb-4" style="width: 15rem;">
+			<div class="card-header mb-1"><h6 class="card-subtitle text-info text-center">{{item}}</h6></div>
+			<p class="card-text text-center text-muted mb-1">{{items[item]}}</p>
+		</div>	
+		</div>	
+		{% endfor %}
+		</div>
+	<center><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5797834730464175" data-ad-slot="6943863363" data-ad-format="auto"></ins></center>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	<p class="text-muted text-right">Last Update - {{time['Time']}} IST</p>
+	<div class="table-responsive">
+	<table class="table table-hover table-bordered" id='playertable'>
+	  <thead class="thead-dark">
+		<tr>
+		  <th>CID</th>
+		  <th>Name</th>
+		  <th>Score</th>
+		  <th>State</th>
+		  <th>B3ID</th>
+		  <th>IP</th>
+		  <th>Rank</th>
+		  <th>Time Played</th>
+		  <th>ScreenShot</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		{% for client in clients %}
+			<tr>
+			  <th scope="row">{{client[0]}}</th>
+			  <td>{{client[1]}}</td>
+			  <td>{{client[2]}}</td>
+			  <td>{{client[3]}}</td>
+			  <td>{{client[4]}}</td>
+			  <td>{{client[5]}}</td>
+			  <td>{{client[6]}}</td>
+			  <td>{{client[7]}}</td>
+			  <td><a class="thumbnail" href="//www.blackassassins.tk/ss/take/?id={{client[4]}}">
+					<button type="button" class="btn btn-success">Take ScreenShot</button>
+			  </a></td>
+			</tr>
+		{% endfor %}
+	  </tbody>
+	</table>
+	</div>
+	<center><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5797834730464175" data-ad-slot="6943863363" data-ad-format="auto"></ins></center>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{% endblock %}

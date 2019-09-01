@@ -1,0 +1,205 @@
+<!--==============================================================================
+	██████████████████████████████████████████████████████████████████
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░CODE BY░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	█░░░░█████████░█████░░████░██████████░█████░██████████░░█████░░░░█
+	█░░░███░░░░░░░░░███░░░░██░░░███░░░░███░███░░░███░░░░███░░███░░░░░█
+	█░░░░█████████░░███░░░░██░░░█████████░░███░░░█████████░░░███░░░░░█
+	█░░░░░░░░░░░███░███░░░░██░░░███░░░░░░░░███░░░███░░███░░░░███░░░░░█
+	█░░░██████████░░░███████░░░█████░░░░░░█████░█████░░████░█████░░░░█
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	█░fb.com/isalapi | github.com/mrsupiri | linkedin.com/in/supiri░░█
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	█░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░█
+	██████████████████████████████████████████████████████████████████
+==============================================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Black Assassins Esport</title> 
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="keywords" content="cod4,gaming,sl,gametracker,callofduty,servers,screenshots,forum,xlrstatus">
+	<meta name="author" content="Supiri">	
+	<meta property="og:title" content="Black Assassins Esport" />
+	
+{% if metadata is defined %}
+	<meta property="og:url" content="https://blackassassins.tk/{{metadata[2]}}" />
+	<meta property="og:description" content="{{metadata[1]}}">
+	<meta property="og:image" content="http://blackassassins.tk/static/{{metadata[0]}}.jpg" />
+	<meta property="og:image:secure_url" content="https://blackassassins.tk/static/{{metadata[0]}}.jpg" />
+	<meta property="og:image:alt" content="{{metadata[1]}}" />
+{% else %}
+	<meta property="og:description" content="Black Assassins formerly known as legions e-sport is Sri Lankan Gaming Clan Community">
+	<meta property="og:image" content="http://blackassassins.tk/static/img/logo.jpg" />
+	<meta property="og:image:secure_url" content="https://blackassassins.tk/static/img/logo.jpg" />
+	<meta property="og:image:alt" content="Black Assassins Logo" />
+	
+{% endif %}
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta property="og:image:width" content="800" />
+	<meta property="og:image:height" content="600" />
+	<meta property="og:type" content="website" />
+
+	<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+	
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' type='text/css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/dataTables.bootstrap4.min.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.min.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/magnific-popup.css') }}" type="text/css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/creative.min.css') }}" type="text/css">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="/">Black Assassins</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="nav navbar-nav">
+				<li class="nav-item"><a href="//forum.blackassassins.tk" class="nav-link">Froum</a></li>
+				
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Server</a>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item" href="/server/promod/">Player List</a>
+					  <a class="dropdown-item" href="https://ss.supiritech.tk/ba/">All ScreenShots</a>
+					  <a class="dropdown-item" href="/ss/banned/">Banned Players</a>
+					</div>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Echelon</a>
+					<div class="dropdown-menu">
+					  <a class="dropdown-item" href="/admins/">Admins List</a>
+					  <a class="dropdown-item" href="/penalties/">Ban List</a>
+					</div>
+				</li>
+				<li class="nav-item"><a href="//blackassassins.tk/request/kmusic" class="nav-link">Requst KMusic</a></li>
+			</ul>
+			<ul class="nav navbar-nav ml-auto">
+				{% if session.logged_in %}
+					{% if session.level == 128 %}
+					<li class="nav-item disabled"><a class="nav-link" href="#" disabled>Settings</a></li>
+					{% endif %}
+					<li class="nav-item disabled"><a class="nav-link" href="#" disabled>My Account</a></li>
+					<li class="nav-item"><a class="nav-link" href="/logout/">Logout</a></li>
+				{% else %}
+					<li class="dropdown order-1">
+						<button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle">Login <span class="caret"></span></button>
+						<ul class="dropdown-menu dropdown-menu-right mt-1">
+						  <li class="p-3">
+								<form class="form" role="form" method="post" action="/login/">
+									<div class="form-group">
+										<input id="username" name="username" placeholder="Username" class="form-control form-control-sm" type="text" required="" value="{{request.form.username}}">
+									</div>
+									<div class="form-group">
+										<input id="password" name="password" placeholder="Password" class="form-control form-control-sm" type="password" required="" value="{{request.form.password}}">
+									</div>
+									<div class="form-group">
+										<input class="btn btn-primary" type="submit" value="Login">
+									</div>
+									<div class="form-group text-xs-center">
+										<small>No account? <a href="#" data-toggle="modal" data-target="#register">Register here</a></small><br>
+										<small><a href="#">Forgot password?</a></small>
+									</div>
+								</form>
+							</li>
+						</ul>
+					</li>
+				{% endif %}
+			</ul>
+        </div>
+      </div>
+    </nav>
+	
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+
+
+<body id="page-top">
+{% if fullwidth is not defined %}
+	<div class="container" style="min-height:100%;padding-top: 75px;">
+	{% with messages = get_flashed_messages() %}{% if messages %}{% for message in messages %}
+	<div class="alert alert-warning alert-dismissible" role="alert">
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+	{{message}}
+	</div>
+	{% endfor %}{% endif %}{% endwith %}
+	{% if session.logged_in and session.authkey != None %}
+	<div class="alert alert-danger" role="alert">
+		<button type="button" class="close" data-dismiss="alert">×</button>
+		<center>Welcome ! It's look like you are new to here when you visit the Black Assassins Server type <strong>!webauth {{session.authkey}}</strong> to complete the registration</center>
+	</div>
+	{% endif %}
+{% endif %}
+	{% block body %}{% endblock %}
+{% if fullwidth is not defined %}
+	</div>
+{% endif %}
+	<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+					<h4 class="modal-title" id="register-title" style='margin: 0 auto;'>Registration form</h4>
+				</div>
+				<div class="modal-body">
+					<form class="form" role="form" method="post" action="/register/">
+
+					<div class="form-group">
+						<label for="">Name</label>
+						<input id="displayname" name="displayname" placeholder="" value="{{request.form.displayname}}" class="form-control form-control-sm" type="text" required="">
+					</div>
+
+					<div class="form-group">
+						<label for="">Username</label>
+						<input id="username" name="username" placeholder="" value="{{request.form.username}}" class="form-control form-control-sm" type="text" required="">
+					</div>
+
+					<div class="form-group">
+						<label for="">Email</label>
+						<input id="email" name="email" placeholder="" value="{{request.form.email}}" class="form-control form-control-sm" type="email" required="">
+					</div>
+
+					<div class="form-group">
+						<label for="">Password</label>
+						<input id="password" name="password" placeholder="" value="{{request.form.password}}" class="form-control form-control-sm" type="password" required="">
+					</div>
+					
+					<div class="form-group">
+						<input type="checkbox" required="">
+						I agree with <a href="#">terms and conditions.</a>
+					</div>
+				</div>
+				<div class="modal-footer">
+						<input class="btn btn-primary" type="submit" value="Register">
+				</div>
+					</form>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="{{ url_for('static', filename='js/ads.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/MyClan.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/scrollreveal.min.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>	
+	<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js" type="text/javascript" language="javascript"></script>
+	<script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js" type="text/javascript" language="javascript"></script>
+	<script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-109345139-1"></script>
+	<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</body>
+</html>

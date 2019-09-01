@@ -1,0 +1,61 @@
+{% extends "header.html" %}
+
+{% block body %}
+	<center><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5797834730464175" data-ad-slot="6943863363" data-ad-format="auto"></ins></center>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	<div class="row">
+	<div class="col">	
+	
+		<form id="requestsong" class="form" role="form" method="post" action="/request/kmusic/">
+		  <div class="form-group">
+			<label for="name">Your Name</label>
+			<input type="text" class="form-control" id="name" name="name" placeholder="Mr. Robot" required>
+		  </div>
+		  
+		  
+		  <div class="form-group">
+			<label for="email">Email address</label>
+			<input type="email" class="form-control" id="email" name="email" placeholder="robot@email.com" required>
+			<small class="form-text text-muted">We'll never share your email with anyone else.</small required>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="songname">Song Name</label>
+			<input type="text" class="form-control" id="songname" name="songname" placeholder="All Falls Down" required>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="artists">Artists</label>
+			<input type="text" class="form-control" id="artists" name="artists" placeholder="Alan Walker (feat. Noah Cyrus with Digital Farm Animals)" required>
+		  </div>
+		  
+		  <div class="form-group">
+			<label for="videoid">Youtube Video's ID</label>
+			<input type="text" class="form-control" id="videoid" name="videoid" placeholder="6RLLOEzdxsM" required>
+			<small class="form-text text-muted">copy the text after www.youtube.com/watch?v=</small>
+		  </div>  
+		  
+		  <div class="form-group">
+			<label for="starttime">Start Time (in seconds)</label>
+			<input type="text" class="form-control" id="starttime" name="starttime" placeholder="121" required>
+			<small class="form-text text-muted">KillCam only last for 10 seconds so we need to 10 second frame from the music</small>
+		  </div>
+		  <br/>
+		  <div class="g-recaptcha" data-callback="recaptcha_callback" data-sitekey="6Lc0XDYUAAAAAEXDJ3U6UtRvcva25n9EQXyRyJCC"></div><br/>
+		  <button id="request-preview"type="button" class="btn btn-primary" onclick="getsongpreview()" disabled>Preview</button>&nbsp;&nbsp;&nbsp;&nbsp;
+		  <button id="request-music" type="submit" class="btn btn-primary" disabled>Submit</button>
+
+		</form>
+		<br/>
+		<br/>
+
+	</div>
+	<div class="col col-6">
+		<div class="embed-responsive embed-responsive-4by3">
+		  <iframe class="embed-responsive-item" frameborder="0" gesture="media" id="youtubeembed"></iframe>
+		</div>
+	</div>
+	</div>
+	<center><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5797834730464175" data-ad-slot="6943863363" data-ad-format="auto"></ins></center>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+{% endblock %}

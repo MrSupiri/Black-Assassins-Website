@@ -1,0 +1,63 @@
+{% extends "header.html" %}
+
+{% block body %}
+	<center><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5797834730464175" data-ad-slot="6943863363" data-ad-format="auto"></ins></center>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+
+	<div class="row">
+		<div class="col">	
+			<img src="/static/screenshots/{{data[0][0]}}.jpg" class="img-fluid rounded" width="800"></img>
+		</div>
+		<div class="col col-lg-2">
+			<table class="table table-hover table-bordered">
+				<tr>
+					<th>Name</th>
+					<td>{{data[0][1]}}</td>
+				</tr>
+				<tr>
+					<th>B3ID</th>
+					<td>{{data[0][2]}}</td>
+				</tr>
+				<tr>
+					<th>Visits</th>
+					<td>{{data[0][3]}}</td>
+				</tr>
+				<tr>
+					<th>Aliases</th>
+					<td>{{data[0][4]}}</td>
+				</tr>
+				<tr>
+					<th>GUID</th>
+					<td>{{data[0][5]}}</td>
+				</tr>
+				<tr>
+					<th>Address</th>
+					<td>{{data[0][6]}}</td>
+				</tr>
+				<tr>
+					<th>IP</th>
+					<td>{{data[0][7]}}</td>
+				</tr>
+				<tr>
+					<th>Penalties</th>
+					<td>{{data[0][8]}}</td>
+				</tr>
+				{% if data[0][9] != None %}
+				<tr>
+					<th>Banned By</th>
+					<td>{{data[0][9]}}</td>
+				</tr>
+				{% else %}
+				<tr>
+					<th>Ban Now</th>
+					<td><a href="/ss/ban/?ssid={{data[0][0]}}" ><button type="button" class="btn btn-danger mr-auto">Ban Player</button></a></td>
+				</tr>
+				{% endif %}
+			</table>
+		</div>
+	</div>
+	
+	<center><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5797834730464175" data-ad-slot="6943863363" data-ad-format="auto"></ins></center>
+	<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+	
+{% endblock %}
